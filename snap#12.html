@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>snap#12</title>
+  <style>
+    body
+    {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      animation: nice infinite 5s;
+    }
+    .container
+    {
+      width: 50%;
+      background: #fff;
+      margin: 200px auto;
+      position: relative;
+      padding: 20px 40px;
+      border-radius: 4px;
+      box-sizing: border-box;
+      box-shadow: 0px 10px 20px rgba(0 0 0 /.5);
+    }
+    .loading
+    {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 10px;
+      background: #f1f1f8;
+      box-shadow: inset 0 0 5px rgba(0 0 0 /.2);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .loading::after
+    {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      border-radius: 4px;
+      box-shadow: inset 0 0 5px rgba(0 0 0 /.2);
+      animation: load infinite 5s;
+    }
+    @keyframes load {
+      0%
+      {
+        width: 0%;
+        background: rgb(200, 32, 200);
+      }
+      50%
+      {
+        width: 75%;
+        background: rgb(19, 217, 194);
+      }
+      100%
+      {
+        width: 100%;
+        background: rgb(234, 13, 13);
+      }
+    }
+    @keyframes nice {
+      0%
+      {
+        background: rgb(200, 32, 200);
+      }
+      50%
+      {
+        background: rgb(19, 217, 194);
+      }
+      100%
+      {
+        background: rgb(234, 13, 13);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="loading">
+
+    </div>
+  </div>
+</body>
+</html>

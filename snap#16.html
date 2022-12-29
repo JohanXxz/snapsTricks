@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>snap#16</title>
+  <style>
+    @font-face {
+      font-family: cool;
+      src: url(fonts/playtime.ttf);
+    }
+    body
+    {
+      background: linear-gradient(to left, #fff, #000);
+      min-height: 100vh;
+      margin:0;
+      padding: 0;
+    }
+    .container
+    {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      background: rgb(0, 0, 0);
+      outline: 2px solid rgb(160, 21, 240);
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      color: #fff;
+      box-sizing: border-box;
+      transition: .5s;
+      font-family: cool ,arial ;
+    }
+    .container:hover:before
+    {
+      content: '';
+      position: absolute;
+      bottom: -22px;
+      left: calc(50% - 20px);
+      background: rgb(0, 0, 0);
+      border-right: 2px solid rgb(160, 21, 240);
+      border-bottom: 2px solid rgb(160, 21, 240);
+      width: 40px;
+      height: 40px;
+      transform: rotate(45deg);
+    }
+    .container:hover:after
+    {
+      content: '';
+      position: absolute;
+      top: -22px;
+      right: calc(50% - 20px);
+      background: rgb(0, 0, 0);
+      border-left: 2px solid rgb(160, 21, 240);
+      border-top: 2px solid rgb(160, 21, 240);
+      width: 40px;
+      height: 40px;
+      transform: rotate(45deg);
+    }
+    .container:hover .bloques
+    {
+      display: block;
+    }
+    .direccion
+    {
+      height: 100%;
+      width: 100%;
+      background: transparent;
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+    }
+    .direccion:hover:after
+    {
+      content: '';
+      position: absolute;
+      bottom: 80px;
+      left: -22px;
+      background: rgb(0, 0, 0);
+      border-left: 2px solid rgb(160, 21, 240);
+      border-bottom: 2px solid rgb(160, 21, 240);
+      width: 40px;
+      height: 40px;
+      transform: rotate(45deg) ;
+    }
+    .direccion:hover:before
+    {
+      content: '';
+      position: absolute;
+      bottom: 80px;
+      right: -22px;
+      background: rgb(0, 0, 0);
+      border-right:2px solid rgb(160, 21, 240);
+      border-top: 2px solid rgb(160, 21, 240);
+      width: 40px;
+      height: 40px;
+      transform: rotate(45deg);
+    }
+    .bloques
+    {
+      background: black;
+      color: #fff;
+      position: absolute;
+      display: none;
+      padding: 10px;
+      border-radius: 10px;
+      border: 2px solid rgb(160, 21, 240) ;
+    }
+    .bloques::after
+    {
+      content: '';
+      position: absolute;
+      bottom: -30px;
+      background: #000;
+      width: 90%;
+      height: 6px;
+      left: 5%;
+      border-radius: 50%;
+      filter: blur(5px);
+    }
+
+    .bloque1
+    {
+      top: -130px;
+      left: calc(-50% -0);
+    }
+    .bloque2
+    {
+      bottom: -130px;
+      left: calc(-50% -0);
+    }
+    .bloque3
+    {
+      max-width: 150px;
+      left: -240px;
+      top: 65px;
+    }
+
+    .bloque4
+    {
+      max-width: 150px;
+      right: -240px;
+      top: 65px;
+    }
+
+
+
+  </style>
+</head>
+<body>
+  <div class="container" onclick="saludar()">
+    <div class="direccion"></div>
+    <h2>Practicas con css</h2>
+    <p>Lorem ipsum dolor sittempora possimus </p>
+    <div class="bloques bloque1">Este es un ejemplo de texto alternativo</div>
+    <div class="bloques bloque2">Este es un ejemplo de texto alternativo</div>
+    <div class="bloques bloque3">Este es un ejemplo de texto alternativo</div>
+    <div class="bloques bloque4">Este es un ejemplo de texto alternativo</div>
+  </div>
+  <script>
+    function saludar()
+    {
+      let name = prompt("What's your name?")
+      alert(`Thanks ${name} for looking at this little piece of code :)`)
+    }
+  </script>
+</body>
+</html>

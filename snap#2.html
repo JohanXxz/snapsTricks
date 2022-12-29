@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <title>snap#2</title>
+  <style>
+    @font-face {
+      font-family: nice;
+      src: url(fonts/ANUDI___.ttf);
+    }
+    body
+    {
+      background: linear-gradient(to left, #fff, #000);
+      min-height: 100vh;
+      margin:0;
+      padding: 0;
+    }
+    ul
+    {
+      padding: 30px;
+      margin: 0;
+      border-top: 5px solid rgb(255, 255, 255);
+      border-bottom: 5px solid rgb(255, 255, 255);
+      border-left: 5px solid rgb(0, 0, 0);
+      border-right: 5px solid rgb(0, 0, 0);
+      border-radius: 10px;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: linear-gradient(to right, #fff, #000);
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    ul li
+    {
+      list-style-type: none;
+      color: rgb(0, 0, 0);
+      text-shadow: 0px 5px 10px #fff , 0px -5px 10px #fff ;
+      float: left;
+      font-size: 3em;
+      font-family: nice;
+      transition: 1s;
+    }
+    ul:hover li
+    {
+      transform: rotateY(360deg);
+    }
+    ul:hover li:nth-child(1)
+    {
+      transition-delay: .9s;
+    }
+    ul:hover li:nth-child(4)
+    {
+      transition-delay: .6s;
+    }
+    ul:hover li:nth-child(7)
+    {
+      transition-delay: .3s;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>J</li>
+    <li>O</li>
+    <li>H</li>
+    <li>A</li>
+    <li>N</li>
+    <li>X</li>
+    <li>X</li>
+    <li>Z</li>
+    <div style="clear: both;"></div>
+  </ul>
+</body>
+</html>

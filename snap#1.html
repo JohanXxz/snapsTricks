@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <title>snap#1</title>
+  <style>
+    @font-face {
+      font-family: nice;
+      src: url(fonts/Flavors-Regular.ttf);
+    }
+    body
+    {
+      min-height: 100vh;
+      background: linear-gradient(to left, #fff, #000);
+      padding: 0;
+      margin: 0;
+    }
+    .loading
+    {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+
+    .loading span
+    {
+      font-size: 4rem;
+      font-family: nice;
+      display: inline-block;
+      color: #fff;
+      transition: all .5s;
+      text-shadow: 0px 10px 20px rgb(16, 196, 196);
+    }
+    .loading:hover span
+    {
+      animation: animate 2.5s infinite;
+    }
+    @keyframes animate 
+    {
+      0%
+      {
+        color: rgb(31, 231, 191);
+        transform: translateY(-15px);
+      }
+      25%
+      {
+        color: rgb(19, 70, 255);
+        transform: translateY(15px);
+      }
+      50%
+      {
+        color: rgb(90, 7, 255);
+        transform: translateY(-25px);
+      }
+      75%
+      {
+        color: rgb(173, 32, 239);
+        transform: translateY(25px);
+      }
+      100%
+      {
+        color: rgb(18, 111, 224);
+        transform: translateY(10px);
+      }
+    }
+
+    .loading span:nth-child(1)
+    {
+      animation-delay: .1s;
+    }
+    .loading span:nth-child(2)
+    {
+      animation-delay: .2s;
+    } 
+    .loading span:nth-child(3)
+    {
+      animation-delay: .3s;
+    } 
+    .loading span:nth-child(4)
+    {
+      animation-delay: .4s;
+    } 
+    .loading span:nth-child(5)
+    {
+      animation-delay: .5s;
+    } 
+    .loading span:nth-child(6)
+    {
+      animation-delay: .6s;
+    } 
+    .loading span:nth-child(7)
+    {
+      animation-delay: .7s;
+    }
+    .loading span:nth-child(8)
+    {
+      animation-delay: .8s;
+    }
+    .loading span:nth-child(9)
+    {
+      animation-delay: .9s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container loading">
+    <span>J</span>
+    <span>O</span>
+    <span>H</span>
+    <span>A</span>
+    <span>N</span>
+    <span>X</span>
+    <span>X</span>
+    <span>Z</span>
+    <span>.</span>
+  </div>
+</body>
+</html>

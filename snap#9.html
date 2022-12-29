@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <title>snap#9</title>
+  <style>
+    @font-face {
+      font-family: nice;
+      src: url(ANUDRG__.ttf);
+    }
+    body
+    {
+      background: linear-gradient(to left, #fff, #000);
+      min-height: 100vh;
+      margin:0;
+      padding: 0;
+    }
+    .imageBox
+    {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      overflow: hidden;
+      border-radius: 10px;
+      transform: translateX(-50%) translateY(-50%);
+      box-shadow: 0 20px 20px rgba(255 255 255 /.4);
+    }
+    .imageBox img
+    {
+      width: 100%;
+      height: 100%;
+      transition: .5s;
+    }
+    .imageBox:hover .textBox
+    {
+      bottom: -65%;
+    }
+    .imageBox:hover img
+    {
+      transform: translateY(-35%);
+    }
+    .imageBox .textBox
+    {
+      position: absolute;
+      bottom: -100%;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      background: rgb(0, 0, 0);
+      box-sizing: border-box;
+      font-family: nice, Arial;
+      font-size: 14px;
+      transition: .5s;
+    }
+    .imageBox .textBox p
+    {
+      margin: 0;
+      padding: 0;
+      color: rgb(255, 238, 238);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="imageBox">
+    <img src="images/pexels-pixabay-315191.jpg" alt="No hay texto alternativo">
+    <div class="textBox">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit id praesentium sapiente, est consectetur rerum mollitia earum explicabo. Exercitationem, vel?Lorem ipsum dolor sit, amet consectetur adipisicing Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, vero optio rerum numquam</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body
+    {
+      background: linear-gradient(to left, #fff, #000);
+      min-height: 100vh;
+    }
+    .circle
+    {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      align-items: center;
+      background-image:url(images/pexels-elīna-arāja-3319333.jpg);
+      background-size: cover;
+      background-position: center;
+    }
+    .circle:hover
+    {
+      background: transparent;
+    }
+    .circle:hover .circles:nth-child(1)
+    { 
+      position: absolute;
+      width: 95%;
+      height: 95%;
+      transition: .5s;
+      animation: changes 4s infinite;
+      
+    }
+    @keyframes changes {
+      0%,100%
+      {
+        background: linear-gradient(rgb(239, 4, 4),rgb(10, 9, 9));
+      }
+      25%
+      {
+        background: linear-gradient(rgb(30, 0, 255),rgb(249, 230, 230));
+      }
+      50%
+      {
+        background: linear-gradient(rgb(228, 7, 176),rgb(97, 201, 5));
+      }
+      75%
+      {
+        background: linear-gradient(rgb(40, 235, 5),rgb(9, 113, 231));
+      }
+    }
+    .circle:hover .circles:nth-child(2)
+    { 
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      background: #000;
+      animation: rotar 1s infinite;
+    }
+    .circle:hover .circles:nth-child(3)
+    { 
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      transform: rotate(45deg);
+      animation: changes 4s infinite;
+      border-radius: 50%;
+    }
+    .circle:hover .circles:nth-child(4)
+    {
+      position: absolute;
+      width: 85%;
+      height: 85%;
+      background-image: url(images/human.jpg);
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+    }
+  </style>
+  <title>snap#22</title>
+</head>
+<body>
+  <div class="circle" onclick="comprobar()">
+    <div class="circles"></div>
+    <div class="circles"></div>
+    <div class="circles"></div>
+    <div class="circles"></div>
+  </div>
+  <script>
+    function comprobar()
+    {
+      let nombre = prompt("Escribe tu nombre:")
+      let edad = prompt("Ahora tu edad:")
+      if(edad >= 18)
+      {
+        alert(`Bienvenido al juego ${nombre} :)`)
+      }
+      else
+      {
+        alert(`Lo sentimos mucho joven ${nombre} no puede pasar :(`)
+      }
+    }
+  </script>
+</body>
+</html>
