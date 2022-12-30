@@ -6,6 +6,10 @@
   <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
   <title>snap#24</title>
   <style>
+    @font-face {
+      font-family: cool;
+      src: url(fonts/playtime.ttf);
+    }
     body
     {
       background: linear-gradient(to left, #fff, #000);
@@ -13,9 +17,79 @@
       margin:0;
       padding: 0;
     }
+    ul
+    {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+    ul li
+    {
+      display: inline-block;
+      transform-style: preserve-3d;
+    }
+    ul li a
+    {
+      font-size: 30px;
+      font-family: cool;
+      font-weight: bold;
+      display: block;
+      text-decoration: none;
+    }
+    ul li a span
+    {
+      display: block;
+      padding: 15px;
+      border-radius: 10px;
+      background: #fff;
+    }
+    ul li a span::before
+    {
+      content: attr(title);
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: rgb(255, 255, 255);
+      padding: 15px;
+      transform-style: preserve-3d;
+      transition: .3s;
+      transform: rotateX(90deg) translateY(50px);
+      transform-origin: bottom;
+      background: black;
+      border-radius: 10px;
+    }
+    ul li a span:hover:before
+    {
+      transform: rotateX(0) translateY(0px);
+    }
+    ul li a span::after
+    {
+      content: attr(title);
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: purple;
+      padding: 15px;
+      transform-style: preserve-3d;
+      transition: .3s;
+      transform: rotateX(0) translateY(0);
+      transform-origin: top;
+      background: rgb(255, 255, 255);
+      border-radius: 10px;
+    }
+    ul li a span:hover::after
+    {
+      transform: rotateX(90deg) translateY(-10px);
+    }
   </style>
 </head>
 <body>
-  
+  <ul>
+    <li><a href="#"> <span title="home">home</span></a></li>
+    <li><a href="#"> <span title="services">services</span></a></li>
+    <li><a href="#"> <span title="contact">contact</span></a></li>
+    <li><a href="#"> <span title="help">help</span></a></li>
+  </ul>
 </body>
 </html>
